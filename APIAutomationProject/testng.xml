@@ -1,0 +1,11 @@
+<suite name="API Test Suite">
+    <listeners>
+        <listener class-name="com.api.Listeners.TestListeners"/>
+    </listeners>
+
+    <test name="API Tests">
+        <classes>
+            <class name="com.api.tests.CreateBooking"/>
+        </classes>
+    </test>
+</suite>
