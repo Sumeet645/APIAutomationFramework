@@ -15,7 +15,7 @@ on:
     branches: [ main,TestBranch,master ]
   schedule:
     # Runs twice: daily at 2 AM UTC and Monday/Thursday at 2 PM UTC
-    - cron: '36 17 * * *'     # Daily at  11PM UTC
+    - cron: '37 17 * * *'     # Daily at  11PM UTC
     - cron: '0 17 * * 1,4'  # Monday and Thursday at 2 PM UTC
 
 jobs:
@@ -27,7 +27,7 @@ jobs:
       issues: write
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     
     - name: Set up JDK
       uses: actions/setup-java@v3
