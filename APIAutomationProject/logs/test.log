@@ -98,3 +98,43 @@ Content-Type=application/json
     }
 } 
 19:03:32.458 [main] INFO  com.api.Listeners.TestListeners - Test Passed: createBookingTest
+22:35:34.848 [main] INFO  com.api.Listeners.TestListeners - Test Started: createBookingTest
+22:35:36.305 [main] INFO  com.api.filters.LoggingFilter - Request : POST, https://restful-booker.herokuapp.com/booking
+22:35:36.305 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+22:35:45.313 [main] INFO  com.api.filters.LoggingFilter - Status code: 200 
+22:35:45.315 [main] INFO  com.api.filters.LoggingFilter - Response Body: {
+    "bookingid": 2169,
+    "booking": {
+        "firstname": "Tim",
+        "lastname": "Brown",
+        "totalprice": 121,
+        "depositpaid": true,
+        "bookingdates": {
+            "checkin": "2018-01-01",
+            "checkout": "2019-01-01"
+        },
+        "additionalneeds": "Breakfast"
+    }
+} 
+22:35:45.371 [main] INFO  com.api.Listeners.TestListeners - Test Passed: createBookingTest
+23:48:58.441 [main] INFO  com.api.Listeners.TestListeners - Test Started: createBookingTest
+23:48:59.656 [main] INFO  com.api.filters.LoggingFilter - Request : POST, https://restful-booker.herokuapp.com/booking
+23:48:59.657 [main] INFO  com.api.filters.LoggingFilter - Headers: Accept=*/*
+Content-Type=application/json
+23:49:01.573 [main] INFO  com.api.filters.LoggingFilter - Status code: 200 
+23:49:01.575 [main] INFO  com.api.filters.LoggingFilter - Response Body: {
+    "bookingid": 4459,
+    "booking": {
+        "firstname": "Tim",
+        "lastname": "Brown",
+        "totalprice": 121,
+        "depositpaid": true,
+        "bookingdates": {
+            "checkin": "2018-01-01",
+            "checkout": "2019-01-01"
+        },
+        "additionalneeds": "Breakfast"
+    }
+} 
+23:49:01.639 [main] INFO  com.api.Listeners.TestListeners - Test Passed: createBookingTest
