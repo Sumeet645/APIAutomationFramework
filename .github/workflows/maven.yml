@@ -15,7 +15,7 @@ on:
     branches: [ main,TestBranch,master ]
   schedule:
     # Runs twice: daily at 2 AM UTC and Monday/Thursday at 2 PM UTC
-    - cron: '30 18 * * *'     # Daily at  11PM UTC
+    - cron: '37 18 * * *'     # Daily at  11PM UTC
     - cron: '0 17 * * 1,4'  # Monday and Thursday at 2 PM UTC
 
 jobs:
@@ -37,6 +37,7 @@ jobs:
         cache: 'maven'
     - name: Run API Tests
       run: mvn clean test -Dsuite=testng -X
+      working-directory: ./APIAutomationProject
     
     - name: Upload test results
       if: always()
@@ -44,16 +45,16 @@ jobs:
       with:
         name: test-results
         path: |
-          test-output/reports/
-          target/surefire-reports/
-          logs/
+          APIAutomationProject/test-output/reports/
+          APIAutomationProject/target/surefire-reports/
+          APIAutomationProject/logs/
     
     - name: Publish Test Report
       if: always()
       uses: dorny/test-reporter@v1
       with:
         name: TestNG Results
-        path: target/surefire-reports/junitreports/TEST-*.xml
+        path: APIAutomationProject/target/surefire-reports/junitreports/TEST-*.xml
         reporter: java-junit
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
