@@ -1,5 +1,6 @@
 package com.api.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
@@ -42,6 +43,7 @@ public class CreateBooking {
 		  System.out.println(response.getBooking().getTotalprice());
 		  System.out.println(response.getBooking().getBookingdates().getCheckin());
 		  System.out.println(response.getBooking().getBookingdates().getCheckout());
+		  Assert.assertEquals(response.getBooking().getFirstname(), "Tim");
 		 
 	}
 	
